@@ -12,7 +12,9 @@ void ft_putstr(char *str)
     }
 }
 
-int main(void)
+int main()
 {
     ft_putstr("hello");
+    return 0;
 }
+
