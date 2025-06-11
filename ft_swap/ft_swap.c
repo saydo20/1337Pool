@@ -5,3 +5,8 @@ void ft_swap(int *a, int *b)
     *b = *a;
     *b = tmp;
 }
+
+
+int main(void){
+    ft_swap(1,2);
+}
