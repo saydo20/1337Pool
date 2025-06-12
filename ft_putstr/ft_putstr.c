@@ -22,5 +22,5 @@ void ft_putstr(char *str)
 }
 int main(void)
 {
-    ft_putstr("saad jdia");
+    ft_putstr("anass");
 }
