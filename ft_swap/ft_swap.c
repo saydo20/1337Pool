@@ -2,11 +2,13 @@ void ft_swap(int *a, int *b)
 {
     int tmp;
     tmp = *a;
-    *b = *a;
+    *a = *b;
     *b = tmp;
 }
 
-
-int main(void){
-    ft_swap(1,2);
+int main(void)
+{
+    int a = 12;
+    int b = 13;
+    ft_swap(&a, &b);
 }
