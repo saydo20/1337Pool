@@ -22,6 +22,7 @@ void ft_putstr(char *str)
 unsigned int ft_strlcpy(char *dest, char *src, unsigned int n)
 {
     unsigned int i = 0;
+    unsigned int j = 0;
 
     if (n > 0)
     {
@@ -33,18 +34,16 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int n)
         dest[i] = '\0';
     }
 
-    i = 0;
-    while (src[i] != '\0')
+    while (src[j] != '\0')
     {
-        i++;
+        j++;
     }
-    return i;
+    return j;
 }
 
-#include <stdio.h>
 int main(void)
 {
-    char src[] = "1337 C Piscine";
+    char src[] = "1337 C  Piscine";
     char dest[100];
-    printf("%d" , ft_strlcpy(dest, src, 8));
+    ft_strlcpy(dest, src, 8);
 }
