@@ -37,11 +37,25 @@ void ft_puthexa(int nbr)
 
 void ft_putbinary(int nbr)
 {
+
     if (nbr / 2 > 0)
     {
         ft_putbinary(nbr / 2);
     }
-    ft_putnbr(nbr % 2);
+    ft_putchar((nbr % 2) + '0');
+}
+void ft_putoctal(int nbr)
+{
+    if (nbr < 0)
+    {
+        ft_putchar('-');
+        nbr = -nbr;
+    }
+    if (nbr / 8 > 0)
+    {
+        ft_putoctal(nbr / 8);
+    }
+    ft_putchar((nbr % 8) + '0');
 }
 
 int ft_strlen(char *str)
@@ -78,11 +92,13 @@ void ft_putnbr_base(int nbr, char *base)
         ft_puthexa(nbr);
     if (base_len == 2)
         ft_putbinary(nbr);
+    if (base_len == 8)
+        ft_putoctal(nbr);
 }
 
 int main(void)
 {
-    int i = 425678;
-    char base[] = "01";
+    int i = 42;
+    char base[] = "poneyvif";
     ft_putnbr_base(i, base);
 }
