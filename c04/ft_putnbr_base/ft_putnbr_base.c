@@ -1,9 +1,9 @@
 #include <unistd.h>
-void ft_putchar(char c)
+void ft_putchar(char c) //write char 
 {
     write(1, &c, 1);
 }
-void ft_putnbr(int nb)
+void ft_putnbr(int nb) // write decimal number
 {
     if (nb < 0)
     {
@@ -16,7 +16,7 @@ void ft_putnbr(int nb)
     }
     ft_putchar((nb % 10) + '0');
 }
-void print_hex(unsigned int c)
+void print_hex(unsigned int c) // git hexadecimal numbers
 {
     char *hex = "0123456789abcdef";
 
@@ -28,14 +28,14 @@ void print_hex(unsigned int c)
     ft_putchar(second);
 }
 
-void ft_puthexa(int nbr)
+void ft_puthexa(int nbr) // write hexadecimal numbers
 {
     if (nbr / 16 > 16)
         ft_puthexa(nbr / 16);
     print_hex(nbr);
 }
 
-void ft_putbinary(int nbr)
+void ft_putbinary(int nbr) // write the binary numbers
 {
 
     if (nbr / 2 > 0)
@@ -44,7 +44,7 @@ void ft_putbinary(int nbr)
     }
     ft_putchar((nbr % 2) + '0');
 }
-void ft_putoctal(int nbr)
+void ft_putoctal(int nbr) // write the octal numbers 
 {
     if (nbr < 0)
     {
@@ -58,14 +58,14 @@ void ft_putoctal(int nbr)
     ft_putchar((nbr % 8) + '0');
 }
 
-int ft_strlen(char *str)
+int ft_strlen(char *str) // get the string lenght 
 {
     int i = 0;
     while (str[i])
         i++;
     return i;
 }
-int ft_is_repeat(char *str)
+int ft_is_repeat(char *str) // check if the base srting are repeat
 {
     int len = ft_strlen(str);
     if (len == 2 && str == "01")
@@ -79,7 +79,7 @@ int ft_is_repeat(char *str)
     return 0;
 }
 
-void ft_putnbr_base(int nbr, char *base)
+void ft_putnbr_base(int nbr, char *base) // the putnbr_base function colect all the functions 
 {
     int base_len = ft_strlen(base);
     if (ft_strlen(base) < 2)
@@ -98,7 +98,7 @@ void ft_putnbr_base(int nbr, char *base)
 
 int main(void)
 {
-    int i = 42;
-    char base[] = "poneyvif";
+    int i = 42345;
+    char base[] = "01";
     ft_putnbr_base(i, base);
 }
