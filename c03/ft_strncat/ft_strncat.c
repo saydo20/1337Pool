@@ -38,7 +38,7 @@ char *ft_strncat(char *dest, char *src, unsigned int nb)
 }
 int main(void)
 {
-    char dest[77] = "hello";
+    char dest[20] = "hello";
     char src[] = "world";
     ft_putstr(ft_strncat(dest, src , 2));
     return 0;

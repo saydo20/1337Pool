@@ -21,5 +21,5 @@ void ft_putnbr(int nb)
 
 int main(void)
 {
-    ft_putnbr(-20);
+    ft_putnbr(1123456);
 }
