@@ -50,8 +50,10 @@ void ft_putnbr_base(int nbr, char *base)
 
     if (nb >= base_len)
         ft_putnbr_base(nb / base_len, base);
-
     ft_putchar(base[nb % base_len]);
 }
-
+int main(void)
+{
+    ft_putnbr_base(3, "0123456789");
+}
 

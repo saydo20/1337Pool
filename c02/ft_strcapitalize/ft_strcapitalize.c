@@ -33,7 +33,7 @@ char	*ft_strcapitalize(char *str)
 
 int	main(void)
 {
-	char name[] = "salut comment tu vas ? 42mots";
+	char name[] = "heloo my naMe is saaD how are yo42o, my freand";
 
 	printf("%s", ft_strcapitalize(name));
 }

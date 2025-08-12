@@ -5,13 +5,13 @@ void ft_putchar(char c)
     write(1, &c, 1);
 }
 
-void print_hex(unsigned char c)
+void print_hex(char c)
 {
     char *hex = "0123456789abcdef";
 
-    char first = hex[c / 16];
+    char first = hex[(unsigned char)c / 16];
 
-    char second = hex[c % 16];
+    char second = hex[(unsigned char)c % 16];
 
     ft_putchar(first);
     ft_putchar(second);
@@ -35,6 +35,8 @@ void ft_putstr_non_printable(char *str)
 
 int main(void)
 {
+    char b = 200;
     char a[] = "Coucou\ntu vas bien ?";
-    ft_str_is_printable(a);
+    a[3] = b;
+    ft_putstr_non_printable(a);
 }
